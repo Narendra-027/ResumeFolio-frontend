@@ -1,0 +1,135 @@
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 1rem;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  height: fit-content;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: #fff;
+  border-radius: 0.2cm;
+  padding: 0.5%;
+}
+
+.colors {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0 0.8rem;
+}
+
+.colors .color {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #239ce2;
+}
+.colors .active {
+  border: 0.1rem solid #000;
+}
+
+.download_data {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.toolbar button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  /* padding: 8px 16px;
+  border-radius: 5px; */
+  background-color: #239ce2;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  /* font-size: 1rem; */
+  letter-spacing: 0.01rem;
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toolbar button svg {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+}
+
+.templates {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  background-color: white;
+  border-radius: 0.2cm;
+  padding: 0.5%;
+}
+
+.templateButton {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  background-color: #239ce2;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.templates .active {
+  border: 0.1rem solid #000;
+}
+
+@media only screen and (min-width:1300px){
+  .main {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:1300px){
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .toolbar {
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

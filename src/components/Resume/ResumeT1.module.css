@@ -1,0 +1,163 @@
+.resume {
+    --color: #239ce2;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.1rem;
+    max-width: 8.5in;
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header .heading {
+    font-size: 2.7rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .header .subHeading {
+    color: var(--color);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .header .links {
+    margin-top: 0.4rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+  }
+  
+  .header .link {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .header .link svg {
+    color: var(--color);
+    height: 0.85rem;
+    width: 0.85rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column; /* Change to column for single column layout */
+    gap: 1rem;
+  }
+  
+  .section .sectionTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 0.12rem solid #000;
+  }
+  
+  .section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.08rem 0rem;
+  }
+  
+  .section .content .item {
+    border-bottom: 0.02rem dotted lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+  }
+  
+  .section .content .item:last-child {
+    border-bottom: none;
+  }
+  
+  .content .title {
+    font-weight: 500;
+    font-size: 0.94rem;
+    line-height: 1rem;
+    color: navy;
+  }
+  
+  .content .type {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  
+  .content .result {
+    font-size: 0.84rem;
+  }
+  
+  .content .subTitle {
+    font-weight: bold;
+    color: var(--color);
+    font-size: 0.84rem;
+  }
+  
+  .content .overview {
+    font-size: 0.84rem;
+  }
+  
+  .content .link {
+    display: flex;
+    gap: 0.15rem;
+    font-size: 0.65rem;
+    cursor: pointer;
+    color: var(--color);
+  }
+  
+  .content .link svg {
+    height: 0.75rem;
+    width: 0.75rem;
+    color: var(--color);
+  }
+  
+  .content .date {
+    display: flex;
+    gap: 0.15rem;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  
+  .content .date svg {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+  
+  .content .points,
+  .numbered {
+    padding-left: 1rem;
+    font-size: 0.84rem;
+  }
+  
+  .numbered li {
+    list-style-type: decimal;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .skill {
+    display: inline-block;
+    padding: 0.1rem 0.1rem;
+    margin: 0.1rem;
+    border: 0.05rem solid #000;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .skillresume {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  

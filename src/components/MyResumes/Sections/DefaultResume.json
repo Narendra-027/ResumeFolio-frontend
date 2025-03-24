@@ -1,0 +1,176 @@
+{
+  "Basic Info": {
+    "id": "Basic Info",
+    "sectionTitle": "Basic Info",
+    "detail": {
+      "name": "First Name Last Name",
+      "title": "Job Title at Company",
+      "linkedin": "https://www.linkedin.com/in/example/",
+      "github": "https://www.github.com/example/",
+      "email": "example@email.com",
+      "phone": "1234567890"
+    }
+  },
+  "Experience": {
+    "id": "Experience",
+    "sectionTitle": "Experience",
+    "details": [
+      {
+        "certificationLink": "https://www.github.com/example/",
+        "title": "Job Title",
+        "startDate": "2023-09-02",
+        "endDate": "2023-09-29",
+        "companyName": "Company1",
+        "location": "City1",
+        "points": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "id": "Projects",
+    "sectionTitle": "Projects",
+    "details": [
+      {
+        "link": "https://github.com/example/project1",
+        "title": "Project1",
+        "type": "",
+        "startDate": "2023-08-02",
+        "endDate": "2023-09-03",
+        "overview": "Tech Stack",
+        "github": "https://github.com/example/project1",
+        "points": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        ]
+      },
+      {
+        "link": "https://github.com/example/project2",
+        "title": "Project2",
+        "type": "",
+        "startDate": "2023-09-02",
+        "endDate": "2023-09-22",
+        "overview": "Tech Stack",
+        "github": "https://github.com/example/project2",
+        "points": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        ]
+      },
+      {
+        "link": "https://github.com/example/project3",
+        "title": "Project3",
+        "type": "",
+        "startDate": "2023-07-07",
+        "endDate": "2023-08-04",
+        "overview": "Tech Stack",
+        "github": "https://github.com/example/project3",
+        "points": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        ]
+      }
+    ]
+  },
+  "Education": {
+    "id": "Education",
+    "sectionTitle": "Education",
+    "details": [
+      {
+        "title": "Degree",
+        "college": "School1",
+        "startDate": "2023-05-12",
+        "endDate": "2023-09-14",
+        "result": "Lorem ipsum"
+      },
+      {
+        "title": "High School",
+        "college": "School2",
+        "startDate": "2023-09-01",
+        "endDate": "2023-09-12",
+        "result": "Lorem ipsum"
+      },
+      {
+        "title": "Secondary",
+        "college": "School3",
+        "startDate": "2023-09-09",
+        "endDate": "2023-09-14",
+        "result": "Lorem ipsum"
+      }
+    ]
+  },
+  "Skills": {
+    "id": "Skills",
+    "sectionTitle": "Skills",
+    "details": [
+      {
+        "title": "title1",
+        "points": [
+          "Skill1",
+          "Skill2",
+          "Skill3",
+          "Skill4",
+          "Skill5"
+        ]
+      },
+      {
+        "title": "title2",
+        "points": [
+          "Skill1",
+          "Skill2",
+          "Skill3",
+          "Skill4",
+          "Skill5"
+        ]
+      },
+      {
+        "title3": "title1",
+        "points": [
+          "Skill1",
+          "Skill2",
+          "Skill3",
+          "Skill4",
+          "Skill5"
+        ]
+      }
+    ]
+  },
+  "Achievements": {
+    "id": "Achievements",
+    "sectionTitle": "Achievements",
+    "points": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    ]
+  },
+  "Coursework": {
+    "id": "Coursework",
+    "sectionTitle": "Coursework",
+    "points": [
+      "Lorem ipsum dolor sit amet",
+      "Consectetur adipiscing elit",
+      "Sed do eiusmod tempor incididunt",
+      "Ut labore et dolore magna aliqua",
+      "Quis nostrud exercitation",
+      "Ut labore et dolore magna aliqua",
+      "Quis nostrud exercitation"
+    ]
+  },
+  "Position of Responsibility": {
+    "id": "Position of Responsibility",
+    "sectionTitle": "Position of Responsibility",
+    "points": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+    ]
+  }
+}

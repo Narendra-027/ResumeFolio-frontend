@@ -148,7 +148,7 @@ function Body(props) {
           />
           <img src={resumeSvg} alt="Resume" style={{width: '45vw'}} />
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column" , width: '100%'}}>
           <div className={styles.templates}>
            {templates.map((item) => (
               <button

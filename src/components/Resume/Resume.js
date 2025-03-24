@@ -58,43 +58,45 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.content}>
           {info.workExp?.details?.map((item) => (
             <div className={styles.item} key={item?.title}>
-              {item.title ? (
-                <p className={styles.title}>{item.title}</p>
-              ) : (
-                <span />
-              )}
-              <div className={styles.row}>
-                  {item.companyName ? (
-                    <p className={styles.subTitle}>{item.companyName}</p>
-                  ) : (
-                    <span />
-                  )}
-                  {item.certificationLink ? (
-                    <a className={styles.link} href={item.certificationLink} target="_blank">
-                      Link
-                      <Paperclip />
-                    </a>
-                  ) : (
-                    <span />
-                  )}
-              </div>
+              <div className = {styles.contentHeader}>
+                {item.title ? (
+                  <p className={styles.title}>{item.title}</p>
+                ) : (
+                  <span />
+                )}
+                <div className={styles.row}>
+                    {item.companyName ? (
+                      <p className={styles.subTitle}>{item.companyName}</p>
+                    ) : (
+                      <span />
+                    )}
+                    {item.certificationLink ? (
+                      <a className={styles.link} href={item.certificationLink} target="_blank">
+                        Link
+                        <Paperclip />
+                      </a>
+                    ) : (
+                      <span />
+                    )}
+                </div>
 
-              <div className={styles.row}>
-                  {item.startDate && item.endDate ? (
-                    <div className={styles.date}>
-                      <Calendar /> {getFormattedDate(item.startDate)} - 
-                      {getFormattedDate(item.endDate)}
-                    </div>
-                  ) : (
-                    <div />
-                  )}
-                  {item.location ? (
-                    <p className={styles.date}>
-                      <MapPin /> {item.location}
-                    </p>
-                  ) : (
-                    <span />
-                  )}
+                <div className={styles.row}>
+                    {item.startDate && item.endDate ? (
+                      <div className={styles.date}>
+                        <Calendar /> {getFormattedDate(item.startDate)} - 
+                        {getFormattedDate(item.endDate)}
+                      </div>
+                    ) : (
+                      <div />
+                    )}
+                    {item.location ? (
+                      <p className={styles.date}>
+                        <MapPin /> {item.location}
+                      </p>
+                    ) : (
+                      <span />
+                    )}
+                </div>
               </div>
               {item.points?.length > 0 ? (
                 <ul className={styles.points}>

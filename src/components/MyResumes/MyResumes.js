@@ -36,11 +36,11 @@ function MyResumes(props) {
         const variable = {
             resume: resumeDefault,
         }
-        Axios.post(`${SERVER_ROUTE}/api/resume/uploadResume`, variable)
+        Axios.post(`${SERVER_ROUTE}/api/resume/uploadResume`, variable, { withCredentials: true })
         .then(response1 =>{
           if(response1.data.success){
               console.log("data:", response1.data);
-              Axios.post(`${SERVER_ROUTE}/api/users/addResume`,{userId: props.user.userData._id, resumeId: response1.data.id})
+              Axios.post(`${SERVER_ROUTE}/api/users/addResume`,{userId: props.user.userData._id, resumeId: response1.data.id}, { withCredentials: true })
               .then(response2 =>{
                   if(response2.data.success){
                     console.log("response2: ",response2);
@@ -65,7 +65,7 @@ function MyResumes(props) {
     
     useEffect(() =>{
       if(props.user && props.user.userData){
-        Axios.get(`${SERVER_ROUTE}/api/users/getResumeList?userId=${props.user.userData._id}`)
+        Axios.get(`${SERVER_ROUTE}/api/users/getResumeList?userId=${props.user.userData._id}`, { withCredentials: true })
         .then(response =>{
           let myResumes = response.data.resumes.map((ele, index) =>{
               return {

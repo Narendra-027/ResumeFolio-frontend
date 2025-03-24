@@ -10,7 +10,7 @@ import {LoginOutlined, UserOutlined,FilePdfOutlined} from '@ant-design/icons'
 function RightMenu(props) {
 
   const logoutHandler = () => {
-    axios.get(`${USER_SERVER}/logout`).then(response => {
+    axios.get(`${USER_SERVER}/logout`, { withCredentials: true }).then(response => {
       if (response.status === 200) {
         props.history.push("/login");
       } else {

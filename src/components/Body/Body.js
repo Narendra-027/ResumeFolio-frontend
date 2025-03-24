@@ -75,7 +75,7 @@ function Body(props) {
   });
 
   useEffect(() =>{
-    Axios.get(`${SERVER_ROUTE}/api/resume/resume_by_id?id=${resumeId}&type=single`).then(
+    Axios.get(`${SERVER_ROUTE}/api/resume/resume_by_id?id=${resumeId}&type=single`, { withCredentials: true }).then(
       response =>{
         setTitle(response.data[0].title);
         setResumeInformation(response.data[0].resume);
@@ -92,7 +92,7 @@ function Body(props) {
       title: title,
       resumeId: resumeId
     }
-    Axios.post(`${SERVER_ROUTE}/api/resume/updateResume`, variable)
+    Axios.post(`${SERVER_ROUTE}/api/resume/updateResume`, variable, { withCredentials: true })
       .then(response =>{
         if(response.data.success){
           alert("resume updated Successfully");

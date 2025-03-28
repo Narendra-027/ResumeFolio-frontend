@@ -38,9 +38,12 @@ const Resume = forwardRef((props, ref) => {
 
   const getFormattedDate = (value) => {
     if (!value) return "";
+  
     const date = new Date(value);
-
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    const monthName = date.toLocaleString("en-US", { month: "short" }); // Gets "Jan", "Feb", etc.
+    const year = date.getFullYear();
+  
+    return `${monthName} ${year}`;
   };
 
   const sectionDiv = {
@@ -69,8 +72,7 @@ const Resume = forwardRef((props, ref) => {
                   {/* duration */}
                   {item.startDate && item.endDate ? (
                     <div className={styles.date}>
-                      <Calendar /> {getFormattedDate(item.startDate)} - 
-                      {getFormattedDate(item.endDate)}
+                      <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
                     </div>
                   ) : (
                     <div />
@@ -163,8 +165,7 @@ const Resume = forwardRef((props, ref) => {
                   {/* project duration */}
                   {item.startDate && item.endDate ? (
                     <div className={styles.date}>
-                      <Calendar /> {getFormattedDate(item.startDate)} -
-                      {getFormattedDate(item.endDate)}
+                      <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
                     </div>
                   ) : (
                     ""
@@ -232,8 +233,7 @@ const Resume = forwardRef((props, ref) => {
               <div className={styles.row}>
                 {item.startDate && item.endDate ? (
                   <div className={styles.date}>
-                    <Calendar /> {getFormattedDate(item.startDate)} -
-                    {getFormattedDate(item.endDate)}
+                    <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
                   </div>
                 ) : (
                   ""

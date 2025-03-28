@@ -146,7 +146,7 @@ const Resume = forwardRef((props, ref) => {
                     )}
 
                     {item.link ? (
-                      <a className={styles.link} href={item.link} target="_blank">
+                      <a className={styles.link} href={item.link} target="_blank" rel="noreferrer">
                         <Paperclip />
                         Link
                       </a>
@@ -154,7 +154,7 @@ const Resume = forwardRef((props, ref) => {
                       <span />
                     )}
                     {item.github ? (
-                      <a className={styles.link} href={item.github} target="_blank">
+                      <a className={styles.link} href={item.github} target="_blank" rel="noreferrer">
                         <GitHub />
                         Github
                       </a>
@@ -426,28 +426,28 @@ const Resume = forwardRef((props, ref) => {
 
           <div className={styles.links}>
             {info.basicInfo?.detail?.email ? (
-              <a className={styles.link} type="email">
+              <p className={styles.link} type="email">
                 <AtSign /> {info.basicInfo?.detail?.email}
-              </a>
+              </p>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.phone ? (
-              <a className={styles.link}>
+              <p className={styles.link}>
                 <Phone /> {info.basicInfo?.detail?.phone}
-              </a>
+              </p>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.linkedin ? (
-              <a className={styles.link} href={info.basicInfo?.detail?.linkedin} target="_blank">
+              <a className={styles.link} href={info.basicInfo?.detail?.linkedin} target="_blank" rel="noreferrer">
                 <Linkedin /> LinkedIn
               </a>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.github ? (
-              <a className={styles.link} href={info.basicInfo?.detail?.github} target="_blank">
+              <a className={styles.link} href={info.basicInfo?.detail?.github} target="_blank" rel="noreferrer">
                 <GitHub /> GitHub
               </a>
             ) : (

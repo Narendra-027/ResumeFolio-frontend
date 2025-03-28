@@ -39,11 +39,9 @@ function MyResumes(props) {
         Axios.post(`${SERVER_ROUTE}/api/resume/uploadResume`, variable, { withCredentials: true })
         .then(response1 =>{
           if(response1.data.success){
-              console.log("data:", response1.data);
               Axios.post(`${SERVER_ROUTE}/api/users/addResume`,{userId: props.user.userData._id, resumeId: response1.data.id}, { withCredentials: true })
               .then(response2 =>{
                   if(response2.data.success){
-                    console.log("response2: ",response2);
                     props.history.push({
                       pathname: "/body",
                       state: { resumeId: response1.data.id,
@@ -83,10 +81,12 @@ function MyResumes(props) {
   <div style={{height: '92vh', paddingTop: '1rem', padding: '0.5rem', display: 'flex',
     flexDirection: 'row', justifyContent: 'center', gap: '1rem',
   backgroundImage: 'url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png")'}}>
-    <div style={{ width: '75%',
+    <div style={{ width: '75%', gap: '1rem', display: 'flex', flexDirection: 'column',
                 height: '90vh', backgroundColor:'#fff', 
                 padding: '0.5rem', borderRadius: '0.25rem'}}>
-        <Button onClick = {handleAddNew} type="primary" icon={<PlusOutlined />} size='large' >New </Button>
+        <Button onClick = {handleAddNew} type="primary" icon={<PlusOutlined />} size='large' style={{maxWidth: '100px', marginBottom: '0.25rem'}}>
+         New 
+        </Button>
         <Table 
          onRow={(record, rowIndex) => {
           return {
@@ -103,6 +103,15 @@ function MyResumes(props) {
           };
         }}
         dataSource={resumeList} columns={columns} 
+        locale={{
+          emptyText: (
+            <div style={{ textAlign: "center" }}>
+              <Button onClick = {handleAddNew} type="primary" size='large' > 
+                Create Your First Resume
+              </Button>
+            </div>
+          ),
+        }}
         />
     </div>
     <img src={resumeSvg} style={{width: '45vw'}} alt="Resume" />

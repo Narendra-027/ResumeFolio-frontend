@@ -231,15 +231,15 @@ const Resume = forwardRef((props, ref) => {
                 <span />
               )}
               <div className={styles.row}>
+                {item.result ? (
+                  <div className={styles.result}>{item.result}</div>
+                ) : (
+                  ""
+                )}
                 {item.startDate && item.endDate ? (
                   <div className={styles.date}>
                     <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
                   </div>
-                ) : (
-                  ""
-                )}
-                {item.result ? (
-                  <div className={styles.result}>{item.result}</div>
                 ) : (
                   ""
                 )}

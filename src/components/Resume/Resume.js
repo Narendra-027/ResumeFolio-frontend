@@ -220,30 +220,36 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.content}>
           {info.education?.details?.map((item) => (
             <div className={styles.item}>
-              {item.title ? (
-                <p className={styles.title}>{item.title}</p>
-              ) : (
-                <span />
-              )}
-              {item.college ? (
-                <p className={styles.subTitle}>{item.college}</p>
-              ) : (
-                <span />
-              )}
-              <div className={styles.row}>
-                {item.result ? (
-                  <div className={styles.result}>{item.result}</div>
-                ) : (
-                  ""
-                )}
-                {item.startDate && item.endDate ? (
-                  <div className={styles.date}>
-                    <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
-                  </div>
-                ) : (
-                  ""
-                )}
-              </div>
+              <div className={styles.contentHeader}>
+                <div className={styles.headerRow}>
+                  {item.title ? (
+                    <p className={styles.title}>{item.title}</p>
+                  ) : (
+                    <span />
+                  )}
+
+                  {item.startDate && item.endDate ? (
+                    <div className={styles.date}>
+                      <Calendar /> {`${getFormattedDate(item.startDate)} -- ${getFormattedDate(item.endDate)}`}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <div className={styles.headerRow}>
+                  {item.college ? (
+                    <p className={styles.subTitle}>{item.college}</p>
+                  ) : (
+                    <span />
+                  )}
+                    {item.result ? (
+                      <div className={styles.result}>{item.result}</div>
+                    ) : (
+                      ""
+                    )}
+                </div>
+            </div>
             </div>
           ))}
         </div>

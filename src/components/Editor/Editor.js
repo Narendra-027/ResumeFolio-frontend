@@ -118,7 +118,7 @@ function Editor(props) {
         />
       </div>
       <div className={styles.row}>
-        <InputControl
+        {/* <InputControl
           label="Certificate Link"
           placeholder="Enter certificate link"
           value={values.certificationLink}
@@ -128,7 +128,7 @@ function Editor(props) {
               certificationLink: event.target.value,
             }))
           }
-        />
+        /> */}
         <InputControl
           label="Location"
           placeholder="Enter location eg. Remote"
@@ -185,14 +185,14 @@ function Editor(props) {
           }
         />
 
-        <InputControl
+        {/* <InputControl
           label="Project Type"
           value={values.type}
           placeholder="| Course/Self Learning Proejct"
           onChange={(event) =>
             setValues((prev) => ({ ...prev, type: event.target.value }))
           }
-        />
+        /> */}
       </div>
       <div className={styles.row}>
         <InputControl

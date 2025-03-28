@@ -87,21 +87,21 @@
         "college": "School1",
         "startDate": "2023-05-12",
         "endDate": "2023-09-14",
-        "result": "Lorem ipsum"
+        "result": "Marks: dd/100"
       },
       {
         "title": "High School",
         "college": "School2",
         "startDate": "2023-09-01",
         "endDate": "2023-09-12",
-        "result": "Lorem ipsum"
+        "result": "Marks: dd/100"
       },
       {
         "title": "Secondary",
         "college": "School3",
         "startDate": "2023-09-09",
         "endDate": "2023-09-14",
-        "result": "Lorem ipsum"
+        "result": "Marks: dd/100"
       }
     ]
   },

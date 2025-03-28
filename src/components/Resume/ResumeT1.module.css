@@ -96,10 +96,22 @@
 
   .section .content .item .contentHeader{
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+    flex-direction: column;
   }
   
+  .section .content .item .contentHeader .headerRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section .content .item .contentHeader .headerRow .projectHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 0.5rem;
+  }
+
   .section .content .item .row{
     display: flex;
     justify-content: space-between;
@@ -172,18 +184,48 @@
   .hidden {
     display: none;
   }
+
+  /* Skills */
+.skillContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skillContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
   
-  .skill {
-    display: inline-block;
-    padding: 0.1rem 0.1rem;
-    margin: 0.1rem;
-    border: 0.05rem solid #000;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-  }
+.skill {
+  display: inline-block;
+  padding: 0.1rem 0.1rem;
+  margin: 0.1rem;
+  border: 0.05rem solid #000;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.skillresume {
+  display: flex;
+  flex-wrap: wrap;
+}
+
   
-  .skillresume {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+
+/* Course Work */
+.courseContent{
+  font-size: 0.84rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 10px; /* Adjust spacing between items */
+  list-style: none;
+  row-gap: 0.1rem;
+  padding: 0;
+}
+
+.courseContent li {
+  list-style-type: none;
+}

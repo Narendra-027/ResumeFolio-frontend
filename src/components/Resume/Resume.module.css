@@ -124,6 +124,20 @@
   flex-direction: column;
 }
 
+.section .content .item .contentHeader .headerRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section .content .item .contentHeader .headerRow .projectHeading{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  gap: 0.5rem;
+}
+
+
 .section .content .item .row{
   display: flex;
   justify-content: space-between;
@@ -213,6 +227,24 @@
   display: none;
 }
 
+/* work Experience */
+.workHeading{
+
+}
+
+/* Skills */
+
+.skillContent{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .skill {
   display: inline-block;
   padding: 0.1rem 0.1rem;
@@ -226,6 +258,17 @@
 .skillresume{
   display: flex;
   flex-wrap: wrap;
+}
+
+
+/* Course Work */
+.courseContent{
+  padding-left: 1rem;
+  font-size: 0.84rem;
+}
+
+.courseContent li {
+  list-style-type: disc;
 }
 
 /* @media only screen and (min-width:1300){

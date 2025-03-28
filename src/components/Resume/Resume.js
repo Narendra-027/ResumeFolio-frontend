@@ -59,17 +59,39 @@ const Resume = forwardRef((props, ref) => {
           {info.workExp?.details?.map((item) => (
             <div className={styles.item} key={item?.title}>
               <div className = {styles.contentHeader}>
-                {item.title ? (
-                  <p className={styles.title}>{item.title}</p>
-                ) : (
-                  <span />
-                )}
-                <div className={styles.row}>
+                <div className={styles.headerRow}>
+                  {/* experiecne title */}
+                  {item.title ? (
+                    <p className={styles.title}>{item.title}</p>
+                  ) : (
+                    <span />
+                  )}
+                  {/* duration */}
+                  {item.startDate && item.endDate ? (
+                    <div className={styles.date}>
+                      <Calendar /> {getFormattedDate(item.startDate)} - 
+                      {getFormattedDate(item.endDate)}
+                    </div>
+                  ) : (
+                    <div />
+                  )}
+                </div>
+                <div className={styles.headerRow}>
                     {item.companyName ? (
                       <p className={styles.subTitle}>{item.companyName}</p>
                     ) : (
                       <span />
                     )}
+
+                    {item.location ? (
+                      <p className={styles.date}>
+                        <MapPin /> {item.location}
+                      </p>
+                    ) : (
+                      <span />
+                    )}         
+                </div>
+                {/* <div className={styles.row}>
                     {item.certificationLink ? (
                       <a className={styles.link} href={item.certificationLink} target="_blank">
                         Link
@@ -78,25 +100,7 @@ const Resume = forwardRef((props, ref) => {
                     ) : (
                       <span />
                     )}
-                </div>
-
-                <div className={styles.row}>
-                    {item.startDate && item.endDate ? (
-                      <div className={styles.date}>
-                        <Calendar /> {getFormattedDate(item.startDate)} - 
-                        {getFormattedDate(item.endDate)}
-                      </div>
-                    ) : (
-                      <div />
-                    )}
-                    {item.location ? (
-                      <p className={styles.date}>
-                        <MapPin /> {item.location}
-                      </p>
-                    ) : (
-                      <span />
-                    )}
-                </div>
+                </div> */}
               </div>
               {item.points?.length > 0 ? (
                 <ul className={styles.points}>
@@ -129,52 +133,59 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.content}>
           {info.project?.details?.map((item) => (
             <div className={styles.item}>
-              <div className={styles.row1}>
-                {item.title ? (
-                  <p className={styles.title}>{item.title}</p>
-                ) : (
-                  <span />
-                )}
+              <div className={styles.contentHeader}>
+                <div className={styles.headerRow}>
+                  {/* project title */}
+                  <div className={styles.projectHeading}>
+                    {item.title ? (
+                      <p className={styles.title}>{item.title}</p>
+                    ) : (
+                      <span />
+                    )}
+
+                    {item.link ? (
+                      <a className={styles.link} href={item.link} target="_blank">
+                        <Paperclip />
+                        Link
+                      </a>
+                    ) : (
+                      <span />
+                    )}
+                    {item.github ? (
+                      <a className={styles.link} href={item.github} target="_blank">
+                        <GitHub />
+                        Github
+                      </a>
+                    ) : (
+                      <span />
+                    )}
+                  </div>
+                  {/* project duration */}
+                  {item.startDate && item.endDate ? (
+                    <div className={styles.date}>
+                      <Calendar /> {getFormattedDate(item.startDate)} -
+                      {getFormattedDate(item.endDate)}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className={styles.headerRow}>
+                  {item.overview ? (
+                    <p className={styles.overview}>{item.overview} </p>
+                  ) : (
+                    <span />
+                  )}
+                </div>
+            </div>
+              {/* <div className={styles.row1}>
+
                 {item.type ? (
                   <p className={styles.type}>{item.type}</p>
                 ) : (
                   <span />
                 )}
-              </div>
-              <div className={styles.row}>
-                {item.startDate && item.endDate ? (
-                  <div className={styles.date}>
-                    <Calendar /> {getFormattedDate(item.startDate)} -
-                    {getFormattedDate(item.endDate)}
-                  </div>
-                ) : (
-                  ""
-                )}
-                <div className={styles.row1}>
-                  {item.link ? (
-                    <a className={styles.link} href={item.link} target="_blank">
-                      <Paperclip />
-                       Link
-                    </a>
-                  ) : (
-                    <span />
-                  )}
-                  {item.github ? (
-                    <a className={styles.link} href={item.github} target="_blank">
-                      <GitHub />
-                      Github
-                    </a>
-                  ) : (
-                    <span />
-                  )}
-                </div>
-              </div>
-  
-              {item.overview ? (
-                <p className={styles.overview}>{item.overview} </p>
-              ) : (
-                <span />
-              )}
+              </div> */}
               {item.points?.length > 0 ? (
                 <ul className={styles.points}>
                   {item.points?.map((elem, index) => (
@@ -251,7 +262,7 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.sectionTitle}>{info.skill?.sectionTitle}</div>
         <div className={styles.content}>
           {info.skill?.details?.map((item) => (
-            <div className={styles.item}>
+            <div className={styles.skillContent} key={item.title}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
               ) : (
@@ -287,14 +298,14 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.sectionTitle}>{info.course?.sectionTitle}</div>
         <div className={styles.content}>
           {info.course?.points?.length > 0 ? (
-            <ul className={styles.numbered}>
+            <div className={styles.courseContent}>
               {info.course?.points?.map((elem, index) => (
                 elem.length > 0?
-                <li className={styles.point} key={elem + index}>
+                <li key={elem + index}>
                   {elem}
                 </li>:<span/>
               ))}
-            </ul>
+            </div>
           ) : (
             <span />
           )}

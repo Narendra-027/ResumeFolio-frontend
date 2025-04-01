@@ -1,5 +1,4 @@
 import React,{ useState, useEffect }from 'react'
-import { Link } from 'react-router-dom';
 import {Table, Button} from 'antd';
 import {PlusOutlined} from '@ant-design/icons'
 import resumeData from './Sections/DefaultResume.json';
@@ -11,11 +10,16 @@ import { SERVER_ROUTE } from '../Config.js'
 function MyResumes(props) {
   const [resumeDefault, setResumeDefault] = useState(resumeData);
   const [resumeList, setResumeList] = useState([]);
+
   const getFormattedDate = (value) => {
     if (!value) return "";
+  
     const date = new Date(value);
-
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    const day = date.getDate();
+    const monthName = date.toLocaleString("en-US", { month: "short" }); // Gets "Jan", "Feb", etc.
+    const year = date.getFullYear();
+  
+    return `${monthName} ${day}, ${year}`;
   };
   const columns = [
       {

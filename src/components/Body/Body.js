@@ -7,7 +7,7 @@ import styles from "./Body.module.css";
 import {Input} from 'antd';
 import resumeSvg from "../../assets/resume.svg";
 import { SERVER_ROUTE } from '../Config.js'
-// import { downloadResumeJSON } from './Sections/downLoadJSON';
+// import { downloadResumePDF } from './Sections/downLoadJSON';
 
 function Body(props) {
   const { location } = props; // Destructure the location prop from the props object
@@ -127,6 +127,7 @@ function Body(props) {
         </div>
         <div className={styles.download_data}>
           <button onClick={onSave} style={{}}>Save Resume</button>
+          {/* <button onClick={downloadResumePDF}>DOwnload backend</button> */}
           <ReactToPrint
             trigger={() => {
               return (

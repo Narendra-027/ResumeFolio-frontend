@@ -425,7 +425,7 @@ const Resume = forwardRef((props, ref) => {
 
   return (
     <div ref={ref}>
-      <div ref={containerRef} className={styles.resume} id="resume1">
+      <div ref={containerRef} className={styles.resume} id="resume">
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>

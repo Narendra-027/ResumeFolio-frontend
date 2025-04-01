@@ -1,25 +1,31 @@
-export const downloadResumeJSON = (resumeData) => {
-    // Convert the resume data to a JSON string
-    const resumeDataString = JSON.stringify(resumeData);
+// export const downloadResumeJSON = async () => {
+//     const response = await fetch("http://localhost:5000/api/resume/generate-pdf");
+//     const blob = await response.blob();
   
-    // Create a Blob object containing the JSON data
-    const blob = new Blob([resumeDataString], { type: "application/json" });
+//     const url = window.URL.createObjectURL(blob);
+//     const a = document.createElement("a");
+//     a.href = url;
+//     a.download = "resume.pdf";
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+//   };
   
-    // Generate a unique filename (e.g., based on user's name or a timestamp)
-    const filename = "resume.json";
-  
-    // Create a URL for the Blob object
-    const url = window.URL.createObjectURL(blob);
-  
-    // Create a temporary anchor element to trigger the download
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-  
-    // Simulate a click on the anchor element to initiate the download
-    a.click();
-  
-    // Release the URL object to free up resources
-    window.URL.revokeObjectURL(url);
-  };
+// import jsPDF from "jspdf";
+// import html2canvas from "html2canvas";
+// export const downloadResumePDF = () => {
+//   const resumeElement = document.getElementById("resume"); // Ensure your resume container has this ID
+//   const pdf = new jsPDF("p", "mm", "a4"); // Portrait mode, millimeters, A4 size
+
+//   pdf.html(resumeElement, {
+//     callback: function (pdf) {
+//       pdf.save("resume.pdf"); // Download the PDF
+//     },
+//     x: 10, // Margin from left
+//     y: 10, // Margin from top
+//     width: 190, // Width of the content
+//     windowWidth: resumeElement.scrollWidth, // Adjust width for responsiveness
+//   });
+// };
+
   

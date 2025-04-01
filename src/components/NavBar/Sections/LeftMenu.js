@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import { useSelector } from "react-redux";
 import { HomeOutlined} from '@ant-design/icons'
+import {Link} from 'react-router-dom';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -14,9 +15,9 @@ function LeftMenu(props) {
       key: '/',
       title: 'display',
       label: (
-        <a href="/">
+        <Link to="/">
           Home
-        </a>
+        </Link>
       ),
       icon: <HomeOutlined />
     }

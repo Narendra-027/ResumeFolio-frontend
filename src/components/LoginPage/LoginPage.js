@@ -4,8 +4,12 @@ import { loginUser } from "../../_actions/user_actions";
 import { Form, Input, Button } from 'antd';
 import { useDispatch } from "react-redux";
 import styles from "./LoginPage.module.css";
+import { useLocation } from "react-router-dom";
 
 function LoginPage(props) {
+  const location = useLocation();
+  const { state } = location;
+  console.log("state:",state);
   const dispatch = useDispatch();
   const [formErrorMessage, setFormErrorMessage] = useState(null)
 
@@ -17,7 +21,9 @@ function LoginPage(props) {
     dispatch(loginUser({ email: username, password }))
       .then((response) => {
         if (response.payload.loginSuccess) {
-          props.history.push("/");
+          console.log("from:",state?.from);
+          props.history.push(state?.from || "/");
+          // props.history.push("/");
         } else {
           setFormErrorMessage('Check your Account or Password again');
         }

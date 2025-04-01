@@ -116,7 +116,7 @@ function MyResumes(props) {
     flexDirection: 'row', justifyContent: 'center', gap: '1rem',
   backgroundImage: 'url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png")'}}>
     <div style={{ width: '75%', gap: '1rem', display: 'flex', flexDirection: 'column',
-                height: '90vh', backgroundColor:'#fff',  overflow:'clip',
+                height: '90vh', backgroundColor:'#fff',  overflow:'scroll',
                 padding: '0.5rem', borderRadius: '0.25rem'}}>
         <Button onClick = {handleAddNew} type="primary" icon={<PlusOutlined />} size='large' style={{maxWidth: '100px', marginBottom: '0.25rem'}}>
          New 

@@ -6,8 +6,6 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 30px;
-  /* background-color: rgb(238, 252, 255); */
-  /* background-color: #A3BCB6; */
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
   height: 92vh;
 }
@@ -31,3 +29,22 @@
 .right img {
   width: 400px;
 }
+
+.ctaButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #239ce2, #1369b9);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(to right, #1369b9, #239ce2);
+  transform: scale(1.05);
+}
+

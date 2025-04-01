@@ -6,6 +6,7 @@ import { USER_SERVER } from '../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import {LoginOutlined, UserOutlined,FilePdfOutlined} from '@ant-design/icons'
+import {Link} from 'react-router-dom';
 
 function RightMenu(props) {
 
@@ -20,15 +21,14 @@ function RightMenu(props) {
   };
 
   const user = useSelector(state => state.user);
-  console.log("user",user);
   const menuItems1 = [
     {
       key: 'login',
       title: 'display',
       label: (
-        <a href="/login" >
+        <Link to="/login" >
           Login
-        </a>
+        </Link>
       ),
       icon: <LoginOutlined />,
       style: {
@@ -39,9 +39,9 @@ function RightMenu(props) {
       key: 'register',
       title: 'display',
       label: (
-        <a href="/register">
+        <Link to="/register">
           Sign Up
-        </a>
+        </Link>
       ),
       icon: <UserOutlined />,
       style: {
@@ -55,7 +55,7 @@ function RightMenu(props) {
       key: 'myResume',
       title: 'myResume',
       label: (
-        <a href = "/myresume">My Resumes</a>
+        <Link to = "/myresume">My Resumes</Link>
       ),
       icon: <FilePdfOutlined />,
       style: {

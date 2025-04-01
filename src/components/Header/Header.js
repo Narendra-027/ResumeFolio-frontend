@@ -2,7 +2,7 @@ import React from "react";
 import resumeSvg from "../../assets/resume.svg";
 import styles from "./Header.module.css";
 
-function Header() {
+function Header(props) {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -12,6 +12,10 @@ function Header() {
         <p className={styles.heading}>
           Make your own resume. <span>It's free</span>
         </p>
+        <button className={styles.ctaButton}
+        onClick={() => {props.history.push("/myresume")}}>
+          Create Now
+        </button>
       </div>
       <div className={styles.right}>
         <img src={resumeSvg} alt="Resume" />

@@ -671,12 +671,12 @@ function Editor(props) {
       </div>
 
       <div className={styles.body}>
-        <InputControl
+        {/* <InputControl
           label="Title"
           placeholder="Enter section title"
           value={sectionTitle}
-          onChange={(event) => setSectionTitle(event.target.value)}
-        />
+          onChange={(event) => {setSectionTitle(event.target.value); sections[activeSectionKey] = event.target.value;}}
+        /> */}
 
         <div className={styles.chips}>
           {activeInformation?.details
@@ -711,8 +711,6 @@ function Editor(props) {
         </div>
 
         {generateBody()}
-
-        <button onClick={handleSubmission}>Save</button> 
       </div>
     </div>
   );
